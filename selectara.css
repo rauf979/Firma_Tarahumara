@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+
+.grid-container > * {
+  box-shadow: 10px 10px 10px 15px rgb(45, 169, 185);
+  border-radius: 40px;
+  padding: 100px;
+}
+
+/* Estilos para el título */
+.titulo {
+  font-size: 150px;
+  font-weight: bold;
+  text-align: center;
+  color: #24bdb5; /* Color de texto personalizado */
+  text-shadow: 6px 6px 4px rgba(0, 0, 0, 0.2); /* Sombra de texto */
+  padding: 20px; /* Espacio alrededor del título */
+  
+}
+
+html {
+  height: 100%;
+}
+
+.grid-container {
+  display: grid;
+  gap: 100px;
+  grid-template-areas:
+    "header"
+    "navbar"
+    "main"
+    "sidebar"
+    "footer";
+}
+
+#copy {
+  margin-top: 100px;
+  background-image: url(/imagenes/SELECTARA.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Nanum Gothic", sans-serif;
+  width: 4600.5px;
+  height: 985.5px;
+}
+
+.info {
+  width: 500px; /* Ancho de 300 píxeles */
+  height: 100px; /* Alto de 200 píxeles */
+  margin: -130px 15px 60px 750px;
+  
+}
+
+.cel {
+  width: 500px; /* Ancho de 300 píxeles */
+  height: 100px; /* Alto de 200 píxeles */
+  /* box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75); */
+  margin: 440px 5px 60px 2815px;
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 50px;
+  color: white;
+  text-align: left;
+}
+
+.email {
+  width: 900px; /* Ancho de 300 píxeles */
+  height: 100px; /* Alto de 200 píxeles */
+  /* box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75); */
+  margin: -300px 15px 60px -1300px;
+  
+}
+
+#info2 {
+  /* padding: 0px; */
+  width: 100px; /* Ancho de 300 píxeles */
+  height: 50px; /* Alto de 200 píxeles */
+  /* box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75); */
+  margin: 250px 0px -212px 885px;
+  
+}
+
+.header {
+  grid-area: header;
+  margin: 20px;
+  
+}
+
+.header img {
+  width: 30px;
+  height: 20px;
+}
+
+.navbar {
+  grid-area: navbar;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.main {
+  grid-area: main;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+@media (min-width: 600px) {
+  .grid-container {
+    
+    grid-template-columns: 1300px auto;
+    height: auto;
+    grid-template-areas:
+      "header header"
+      /* "navbar navbar" */
+      "sidebar main"
+      "footer footer";
+  }
+}
+* {
+  padding: 0px;
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 400;
+  box-sizing: border-box;
+  
+}
+
+h1 {
+  font-family: "Nanum Gothic", sans-serif;
+  color: #000000;
+}
+
+body {
+  background-color: white;
+  min-height: 100%;
+  zoom: 25%;
+}
+
+body,
+input,
+label {
+  font-size: 80px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#template {
+  display: auto;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.horizontal-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+form {
+  margin-top: 20px;
+  padding: 24px;
+  border-radius: 16px;
+  background-color: #2fc2c2;
+  border: 10px solid #2fc2c2;
+  text-align: left;
+  width: auto;
+  font-size: 80px;
+  
+}
+
+
+label {
+  width: 100%;
+  display: block;
+  color: white;
+}
+
+label {
+  font-weight: 5000;
+  padding-bottom: 8px;
+}
+
+input {
+  width: 100%;
+  display: block;
+  border-radius: 5px;
+  border: none;
+  padding: 12px;
+  box-sizing: border-box;
+  font-size: 80px;
+}
+
+hr {
+  visibility: hidden;
+  margin: 8px;
+}
+
+button {
+  display: block;
+  color: white;
+  background-color: #2fc2c2;
+  font-size: 194px;
+  padding: 16px 32px;
+  margin: 30px auto;
+  cursor: pointer;
+  border:#e6b56c ;
+  width: 30%;
+  
+}
+
+button:hover {
+  background-color: #e6b56c;
+}
+
+nav{
+  max-width: 1500px;
+  margin: 100px;
+  font-size: 100px;
+  
+}
+
+.menu-horizontal{
+  list-style:none;
+  display:grid;
+  justify-content: space-around;
+  margin-left: 500px;
+  
+}
+
+.menu-horizontal > li > a{
+  display: block;
+  color: #9A3324;
+  text-decoration: none;
+}
+
+.menu-horizontal > li:hover{
+  background-color: #e6b56c;
+}
+
+
+
+table {
+  margin: 0 120px 0 auto;
+ 
+}
+.datos {
+    margin-left: 2010px;
+    margin-right: auto;
+    margin-top: -10px;
+    padding: 0;
+}
+.gotham-narrow-text {
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 7608px) {
+  /* Agrega tus estilos aquí */
+}
+
+/* Estilos para pantallas medianas */
+@media (max-width: 7607px) {
+  /* Agrega tus estilos aquí */
+}
+
+.contact-info {
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 50px;
+  color: white;
+  text-align: left;
+  padding: 0%;
+  width: 800px;
+  height: 160px;
+  line-height: 1.6;
+  
+}
+
+.contact-info a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.small-text {
+  font-size: 30px;
+  color: white;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+}
