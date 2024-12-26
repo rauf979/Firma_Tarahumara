@@ -52,11 +52,11 @@ html {
 
 .cel {
   width: 500px; /* Ancho de 300 píxeles */
-  height: 100px; /* Alto de 200 píxeles */
+  height: 200px; /* Alto de 200 píxeles */
   /* box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75); */
-  margin: 440px 5px 60px 2815px;
+  margin: 410px 5px 60px 2815px;
   font-family: "Nanum Gothic", sans-serif;
-  font-size: 60px;
+  font-size: 50px;
   color: white;
   text-align: left;
 }
@@ -277,7 +277,8 @@ table {
   padding: 0%;
   width: 800px;
   height: 160px;
-  line-height: 1.35;
+  line-height: 1.;
+  padding-top: '50px';
   
 }
 

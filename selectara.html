@@ -18,7 +18,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.10/clipboard.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/dom-to-image@2.6.0/dist/dom-to-image.min.js"></script>    
 
 
     <script>
@@ -159,7 +159,7 @@
                         <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
                              <div class="info" style="width: 600px; height: 160px;  ">
                                 <div class="cel">
-                                    Cel: <span href="cel:" id="cel-input"></span>
+                                    <span style="margin-left: -200px;"></span> Cel: <span href="cel:" id="cel-input" style="margin-left: 1px;"></span> <!-- Ajusta el valor según sea necesario -->
                                         <table class="email">
                                             <tr>
                                                 <td class="contact-info" >
@@ -173,6 +173,7 @@
                             </div>
                             <br>
                             <br>
+            </div>
                             <nav>
                                 <ul class="menu-horizontal">
                                     
@@ -182,23 +183,32 @@
                             
                             
         </article>
-    <footer class="footer">
-        <button type="button" id="captureButton" data-clipboard-target="#copy">
-            <script>
-                document.getElementById('captureButton').addEventListener('click', function () {
-                    const captureArea = document.getElementById('copy');
-                    html2canvas(captureArea).then(function (canvas) {
-                        const downloadLink = document.createElement('a');
-                        downloadLink.href = canvas.toDataURL('image/png');
-                        downloadLink.download = 'Firma_Selectara.png';
-                        downloadLink.click();
-                    });
-                });
-            </script>
-            Descarga la firma
+        <footer class="footer">
+            <button type="button" id="captureButton">
+                Descarga la firma
+            </button>
+        </footer>
+    <script>
+        document.getElementById('captureButton').addEventListener('click', function () {
+            const captureArea = document.getElementById('copy');
+            domtoimage.toPng(captureArea)
+                .then(function (dataUrl) {
+                    // Crea una imagen con la URL generada
+                    var img = new Image();
+                    img.src = dataUrl;
+                    //document.body.appendChild(img);  // Añadir la imagen al body
 
-        </button>
-    </footer>
+                    // Crear un enlace de descarga para la imagen capturada
+                    const downloadLink = document.createElement('a');
+                    downloadLink.href = dataUrl;
+                    downloadLink.download = 'captured_area.png';
+                    downloadLink.click();
+                })
+                .catch(function (error) {
+                    console.error('Error capturando el área:', error);
+                });
+        });
+    </script>
 </body>
 
 </html>
