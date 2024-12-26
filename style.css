@@ -34,7 +34,7 @@ html {
 
 #copy {
   margin-top: 100px;
-  background-image: url(/imagenes/FIRMATARAHUMARA.png);
+  background-image: url(./imagenes/FIRMATARAHUMARA.png);
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "Nanum Gothic", sans-serif;
